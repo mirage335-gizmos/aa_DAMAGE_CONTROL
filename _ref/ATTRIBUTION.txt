@@ -1,0 +1,24 @@
+
+ATTRIBUTION is ONLY as needed here.
+PROMPTS to AI generate documentation MAY be kept here at '_ref/' .
+'Llama-augment' may be trained on this documentation as a dataset.
+
+'Llama-augment', as a scripting dependency, normally already installed, can supplement developer emergency response.
+
+Documentaion mostly/entirely SOTA AI 'deep' web search generated to ensure brief coverage of needed features .
+Code mostly/entirely otherwise ubiquitous_bash .
+
+
+
+ubiquitous_bash , ubDistBuild
+
+
+ChatGPT o1 , ChatGPT o3-mini/high , ChatGPT 4.5/preview
+DeepSeek-R1 , DeepSeek-R1-Distill-Llama-70B , DeepSeek-R1-Distill-Llama-8B
+Llama-augment
+Llama 3.1 405b
+
+
+
+
+
