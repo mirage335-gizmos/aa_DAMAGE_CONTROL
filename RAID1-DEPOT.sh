@@ -38,12 +38,14 @@ BACKGROUND
 #-M (inappropriate for >5GB filesystems)
 mkfs.btrfs --checksum xxhash -d raid1 -m raid1 -L ra1hdd /dev/disk/by-label/r1hdd1 /dev/disk/by-label/r1mmc2
 
-# Optional. Very strongly discouraged.
+# DANGER: Very strongly discouraged! Absence of either SATA or MMC controller, etc, during boot, could cause RAID array breakage.
+# Optional.
 #/etc/fstab
 #nofail
 #errors=remount‑ro
 #defaults,compress=zstd:2,discard=async,commit=45,... 0 1
-
+# CAUTION: SPECULATIVE
+echo "LABEL=r1hdd1  /mnt/ingredients  btrfs  defaults,errors=remount-ro,commit=45,discard=async,compress=zstd:2,autodefrag,noatime,nofail  0  2" >> /etc/fstab
 
 
 # ### _ Use _ ###
@@ -169,6 +171,9 @@ losetup ...
 
 
 << 'EXTRA'
+
+# SPECULATIVE
+smartctl -i /dev/disk/by-label/r1hdd1 | grep -q "SMR"
 
 | **notreelog** | Disables the "tree log" (also known as journal log) mechanism. The tree-log functionality in Btrfs is designed to speed up filesystem recovery after unexpected shutdowns by replaying the log quickly. Disabling it (`notreelog`) reduces performance overhead and wear on disks but can slow filesystem recovery slightly after power issues. Also slightly increases risk of losing recent file writes after a serious crash or power loss event. | Appropriate for workloads where reduced disk activity is needed at expense of minor data recovery safety. |
 
