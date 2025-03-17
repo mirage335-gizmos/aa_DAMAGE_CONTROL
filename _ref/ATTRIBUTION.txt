@@ -1,5 +1,5 @@
 
-ATTRIBUTION is ONLY as needed here.
+ATTRIBUTION-AI is ONLY as needed here.
 PROMPTS to AI generate documentation MAY be kept here at '_ref/' .
 'Llama-augment' may be trained on this documentation as a dataset.
 
@@ -13,10 +13,13 @@ Code mostly/entirely otherwise ubiquitous_bash .
 ubiquitous_bash , ubDistBuild
 
 
-ChatGPT o1 , ChatGPT o3-mini/high , ChatGPT 4.5/preview
-DeepSeek-R1 , DeepSeek-R1-Distill-Llama-70B , DeepSeek-R1-Distill-Llama-8B
-Llama-augment
+perplexity sonar-deep-research
+ChatGPT 4.5/preview
+anthropic claude-3.7-sonnet:thinking
+ChatGPT o3-mini/high , ChatGPT o1
+DeepSeek-R1-Distill-Llama-70B , DeepSeek-R1-Distill-Llama-8B, DeepSeek-R1
 Llama 3.1 405b
+Llama-augment
 
 
 
